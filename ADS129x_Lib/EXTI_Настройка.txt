@@ -1,0 +1,24 @@
+НАСТРОЙКА ВНЕШНИХ ПРЕРЫВАНИЙ ДЛЯ МИКРОСХЕМЫ В ХАЛ.
+
+Для настройки прерываний, нужно закоментривать в файле stm32f4xx_it.c след. строчки: 
+
+/*void EXTI1_IRQHandler(void)
+{*/
+  /* USER CODE BEGIN EXTI1_IRQn 0 */
+
+  /* USER CODE END EXTI1_IRQn 0 */
+//  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
+  /* USER CODE BEGIN EXTI1_IRQn 1 */
+
+  /* USER CODE END EXTI1_IRQn 1 */
+//}
+
+После чего прописать даный метод в Мэйн файле, так как написано ниже:
+
+void EXTI1_IRQHandler(void)
+{
+if(EXTI->PR & (1 << 1) ){
+        EXTI->PR = 1 << 1;
+     }  
+     ReadData(&hspi1,&huart2);
+}

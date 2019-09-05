@@ -1,0 +1,14 @@
+Порты МК должны иметь свои лейблы. Ниже приведен пример, то как должно быть в main.h файле.
+
+#define LED_Pin GPIO_PIN_3
+#define LED_GPIO_Port GPIOC
+#define VREF_Pin GPIO_PIN_4
+#define VREF_GPIO_Port GPIOA
+#define START_Pin GPIO_PIN_4
+#define START_GPIO_Port GPIOC
+#define RESET_Pin GPIO_PIN_5
+#define RESET_GPIO_Port GPIOC
+#define CS_Pin GPIO_PIN_0
+#define CS_GPIO_Port GPIOB
+#define PWDN_Pin GPIO_PIN_1
+#define PWDN_GPIO_Port GPIOB
