@@ -9,3 +9,6 @@ DS18B20 - library for Dalas temp sensor
 LCD_lib - library for LCD display like QC1602a
 
 SSD1602 - library for Oled Display module (I2C)
+
+Hamamatsu_lib - library for P13567-01CT Hamamatsu sensore
+
